@@ -8,6 +8,11 @@
 		<meta name="author" content="">
 		<!-- Mobile Specific Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script
+		  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+		  crossorigin="anonymous">
+		</script>
 		<!-- FONT -->
 		<link rel="stylesheet" href="https://use.typekit.net/yll3ljx.css">
 		<!-- CSS -->
@@ -65,10 +70,12 @@
 				text-align: center;
 				
 			}
-			.three.columns {width: 100%; margin: 0;}
 			
-			@media (min-width: 550px) {
-			.three.columns {width: 25%; margin: 0;}
+			@media (min-width: 550px)
+			{
+				#main-content .column, #main-content .columns {
+					margin-bottom: 2.0rem;
+				}
 			}
 		</style>
 	</head>
@@ -80,34 +87,47 @@
 			</div>
 		</div>
 		
-		<div class="container" style="margin: 2em auto;">
+		<div id="main-content" class="container" style="margin: 2em auto;">
+			<div class="row">
+				<iframe id="showreel" class="twelve columns center" src="https://www.youtube.com/embed/91R9hWQi2fg?showinfo=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" modestbranding="1" allowfullscreen></iframe>
+				<script>
+					$(function($) {
+						function resize()
+						{
+							var div = $('#showreel');
+							div.height(div.width() * 0.5625);
+						}
+						
+						resize();
+						
+						$(window).on('resize', function(){
+							resize();
+						});
+					});
+				</script>
+			</div>
 			<div class="row">
 				<div class="center">
 					<h3>HI, MY NAME IS KARL WARD AND HERE IS A SHOWREEL OF SOME OF THE WORK I HAVE CREATED!</h3>
 				</div>
 			</div>
 			<div class="row">
-				<iframe class="twelve columns center" height="500" src="https://www.youtube.com/embed/91R9hWQi2fg?showinfo=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" modestbranding="1" allowfullscreen></iframe>
+				<image class="three columns" src="images/Skyliner.png" />
+				<image class="three columns" src="images/DropCube.png" />
+				<image class="three columns" src="images/FreeFromWight.png" />
+				<image class="three columns" src="images/Runaway Hero.png" />
 			</div>
 			<div class="row">
-				<div class="row">
-					<image class="three columns" src="images/Skyliner.png" />
-					<image class="three columns" src="images/DropCube.png" />
-					<image class="three columns" src="images/FreeFromWight.png" />
-					<image class="three columns" src="images/Runaway Hero.png" />
-				</div>
-				<div class="row">
-					<image class="three columns" src="images/HAIL.png" />
-					<image class="three columns" src="images/Cannon Fodder.png" />
-					<image class="three columns" src="images/Bedtime.png" />
-					<image class="three columns" src="images/Who Done It.png" />
-				</div>
-				<div class="row">
-					<image class="three columns" src="images/3D Software Rasterizer.png" />
-					<image class="three columns" src="images/3D Physics Engine.png" />
-					<image class="three columns" src="images/Neural Networks and Genetic Algorithms.png" />
-					<image class="three columns" src="images/OO Coding.png" />
-				</div>
+				<image class="three columns" src="images/HAIL.png" />
+				<image class="three columns" src="images/Cannon Fodder.png" />
+				<image class="three columns" src="images/Bedtime.png" />
+				<image class="three columns" src="images/Who Done It.png" />
+			</div>
+			<div class="row">
+				<image class="three columns" src="images/3D Software Rasterizer.png" />
+				<image class="three columns" src="images/3D Physics Engine.png" />
+				<image class="three columns" src="images/Neural Networks and Genetic Algorithms.png" />
+				<image class="three columns" src="images/OO Coding.png" />
 			</div>
 		</div>
 
