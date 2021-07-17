@@ -22,6 +22,16 @@
 				font-family: proxima-nova, sans-serif;
 			}
 			
+			#showreel {
+				margin-bottom: 1em;
+			}
+			
+			h2 {
+				font-weight: bold;
+				font-size: 32pt;
+				text-align: center;
+			}
+			
 			.banner {
 				background: #202020;
 				padding: 0;
@@ -123,6 +133,13 @@
 			
 			.banner button:hover {
 				color: #333;
+			} 
+			ul li {
+				margin-bottom: 2px;
+			}
+			
+			h4 {
+				font-weight: bold;
 			}
 		</style>
 	</head>
@@ -165,20 +182,25 @@
 								$("#ai-project").insertAfter($("#ai-button"));
 								$("#oo-project").insertAfter($("#oo-button"));
 							} else {
-								$("#skyliner-project").insertAfter($("#group-1"));
-								$("#dropcube-project").insertAfter($("#group-1"));
+								$("#gdide-project").insertAfter($("#group-0"));
+								$("#gcp-project").insertAfter($("#group-0"));
+								$("#gep-project").insertAfter($("group-0"));
+								$("#oo-project").insertAfter($("group-0"));
+								
+								$("#3dsr-project").insertAfter($("#group-1"));
+								$("#3dpe-project").insertAfter($("#group-1"));
+								$("#ai-project").insertAfter($("group-1"));
 								$("#freefromwight-project").insertAfter($("group-1"));
-								$("#runawayhero-project").insertAfter($("group-1"));
 								
-								$("#hail-project").insertAfter($("#group-2"));
+								$("#dropcube-project").insertAfter($("#group-2"));
+								$("#ra-project").insertAfter($("#group-2"));
 								$("#cannonfodder-project").insertAfter($("#group-2"));
-								$("#bedtime-project").insertAfter($("#group-2"));
-								$("#whodoneit-project").insertAfter($("#group-2"));
+								$("#skyliner-project").insertAfter($("#group-2"));
 								
-								$("#3dsr-project").insertAfter($("#group-3"));
-								$("#3dpe-project").insertAfter($("#group-3"));
-								$("#ai-project").insertAfter($("#group-3"));
-								$("#oo-project").insertAfter($("#group-3"));
+								$("#hail-project").insertAfter($("#group-3"));
+								$("#bedtime-project").insertAfter($("#group-3"));
+								$("#whodoneit-project").insertAfter($("#group-3"));
+								$("#runawayhero-project").insertAfter($("#group-3"));
 							}
 						}
 						
@@ -212,6 +234,11 @@
 							$("#wide-block-" + i).hide();
 						}
 						
+						register("#gdide-button", "#gdide-project");
+						register("#gcp-button", "#gcp-project");
+						register("#gep-button", "#gep-project");
+						register("#ra-button", "#ra-project");
+						
 						register("#skyliner-button", "#skyliner-project");
 						register("#dropcube-button", "#dropcube-project");
 						register("#freefromwight-button", "#freefromwight-project");
@@ -230,270 +257,362 @@
 				</script>
 			</div>
 			<div class="row">
-			<div class="five columns">
-				<h4>WHO AM I</h4>
-				<p>My name is Karl Ward and I'm a highly skilled programmer, proficient in C++ and C# in environments such as Visual Studio and Xcode. Currently a Games Software Engineering (BSc) student at Bournemouth University achieving 1st class grades in the first 2 years. I maintain a consistent professional approach to projects and a keen eye for well-structured and robust programming. Confident communicator and experienced with working in a team, developed through AAA game development, participating in game-jams and developing and leading indie game projects.</p>
+				<div class="five columns">
+					<h4>ABOUT ME</h4>
+					<p>My name is Karl Ward and I am a highly skilled programmer, proficient in C++ and C# in environments such as Visual Studio and Xcode. Graduated with a first class honours of 76.6% in Games Software Engineering BSc (Hons) at Bournemouth University. I maintain a consistent professional approach to projects and a keen eye for well structured and robust code. Confident communicator and experienced with working in a team, developed through AAA game development, participating in game jams and developing and leading indie game projects.</p>
+				</div>
+				<div class="seven columns">
+					<h4>SKILLS</h4>
+					<ul>
+						<li>Proficient in C++ and C#</li>
+						<li>Visual Studio, Xcode and Unity</li>
+						<li>CMake and Make</li>
+						<li>Git and SVN Source Control.</li>
+						<li>OpenGL, Software Rasterization</li>
+						<li>Bullet &amp; Box2D and experience implementing Rigid-Body physics.</li>
+						<li>Artificial Neural Networks - Pathfinding and State Machines</li>
+						<li>Adobe CC Experience - Photoshop, Illustrator and Premiere</li>
+						<li>Web 2.0 Experience - Full Stack</li>
+					</ul>
+				</div>
 			</div>
-			<div class="seven columns">
-				<h4>My Skills</h4>
-				<ul>
-					<li>Proficient in C++ and C#</li>
-					<li>Visual Studio, Xcode and Unity</li>
-					<li>CMake and Make</li>
-					<li>Git and SVN Source Control.</li>
-					<li>OpenGL, Software Rasterization</li>
-					<li>Bullet &amp; Box2D and experience implementing Rigid-Body physics.</li>
-					<li>Artificial Neural Networks - Pathfinding and State Machines</li>
-					<li>Adobe CC Experience - Photoshop, Illustrator and Premiere</li>
-					<li>Web 2.0 Experience - HTML, CSS, Javascript, PHP and SQL (MySQL)</li>
-				</ul>
-			</div>
-			</div>
-			<div id="group-1" class="row">
-				<image id="skyliner-button" class="project-button three columns" src="images/Skyliner.png" />
-				<image id="dropcube-button" class="project-button three columns" src="images/DropCube.png" />
-				<image id="freefromwight-button" class="project-button three columns" src="images/FreeFromWight.png" />
-				<image id="runawayhero-button" class="project-button three columns" src="images/Runaway Hero.png" />
-			</div>
-			<div id="skyliner-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">SKYLINER</h4>
-					</div>
-					<div class="row">
-						<div class="six columns">
-							<p>Skyliner is a 2D endless runner created in 2016 over a small two week period. This was my first use of the <a href="https://phaser.io/">Phaser</a> and was quite a nice challenge. Its not much to look at from a programming perspective but I believe it has a nice asthetic and I have now decided to expand on this game for a mobile release in 2019.</p>
-							<p>This game took 2 weeks to develop and the initial idea started to emerge in the first few days. The game started of with nothing more than using <strong>HTML5</strong> canvas<strong> </strong>and raw <strong>JavaScript</strong>. After about a few hours I decided to switch to <strong>Phaser</strong>, which is a 2D game engine that works for HTML5. Coping over what I had done didn’t take too long and allowed me to learn how Phaser works quickly.</p>
-							<p>To make the graphics I once again use Photoshop. Over the period of making this game I managed to use the tools within Photoshop to create clouds, and foreground characters and items.</p>
+			<div>
+				<h2>SOFTWARE PROJECTS</h2>
+				<div id="group-0" class="row">
+					<image id="gdide-button" class="project-button three columns" src="images/Game Development IDE.png" />
+					<image id="gcp-button" class="project-button three columns" src="images/Graphics and Computational Programming.png" />
+					<image id="gep-button" class="project-button three columns" src="images/Game Engine Programming.png" />
+					<image id="oo-button" class="project-button three columns" src="images/OO Coding.png" />
+				</div>
+				<div id="gdide-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">GAME DEVELOPMENT IDE</h4>
 						</div>
-						<div class="six columns">
-							<image class="twelve columns" src="images/post-skyliner.png" />
-							<div style="margin: 0 auto; text-align: center;">
-								<a href="https://normalkarl.itch.io/skyliner" target="_blank"><button>Play Now</button></a>
+						<div class="row">
+							<div class="six columns">
+								<p>Skyliner is a 2D endless runner created in 2016 over a small two week period. This was my first use of the <a href="https://phaser.io/">Phaser</a> and was quite a nice challenge. Its not much to look at from a programming perspective but I believe it has a nice asthetic and I have now decided to expand on this game for a mobile release in 2019.</p>
+								<p>This game took 2 weeks to develop and the initial idea started to emerge in the first few days. The game started of with nothing more than using <strong>HTML5</strong> canvas<strong> </strong>and raw <strong>JavaScript</strong>. After about a few hours I decided to switch to <strong>Phaser</strong>, which is a 2D game engine that works for HTML5. Coping over what I had done didn’t take too long and allowed me to learn how Phaser works quickly.</p>
+								<p>To make the graphics I once again use Photoshop. Over the period of making this game I managed to use the tools within Photoshop to create clouds, and foreground characters and items.</p>
+							</div>
+							<div class="six columns">
+								<image class="twelve columns" src="images/post-skyliner.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://normalkarl.itch.io/skyliner" target="_blank"><button>Play Now</button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="gcp-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">GAME DEVELOPMENT IDE</h4>
+						</div>
+						<div class="row">
+							<div class="six columns">
+								<p>Skyliner is a 2D endless runner created in 2016 over a small two week period. This was my first use of the <a href="https://phaser.io/">Phaser</a> and was quite a nice challenge. Its not much to look at from a programming perspective but I believe it has a nice asthetic and I have now decided to expand on this game for a mobile release in 2019.</p>
+								<p>This game took 2 weeks to develop and the initial idea started to emerge in the first few days. The game started of with nothing more than using <strong>HTML5</strong> canvas<strong> </strong>and raw <strong>JavaScript</strong>. After about a few hours I decided to switch to <strong>Phaser</strong>, which is a 2D game engine that works for HTML5. Coping over what I had done didn’t take too long and allowed me to learn how Phaser works quickly.</p>
+								<p>To make the graphics I once again use Photoshop. Over the period of making this game I managed to use the tools within Photoshop to create clouds, and foreground characters and items.</p>
+							</div>
+							<div class="six columns">
+								<image class="twelve columns" src="images/post-skyliner.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://normalkarl.itch.io/skyliner" target="_blank"><button>Play Now</button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="gep-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">GAME DEVELOPMENT IDE</h4>
+						</div>
+						<div class="row">
+							<div class="six columns">
+								<p>Skyliner is a 2D endless runner created in 2016 over a small two week period. This was my first use of the <a href="https://phaser.io/">Phaser</a> and was quite a nice challenge. Its not much to look at from a programming perspective but I believe it has a nice asthetic and I have now decided to expand on this game for a mobile release in 2019.</p>
+								<p>This game took 2 weeks to develop and the initial idea started to emerge in the first few days. The game started of with nothing more than using <strong>HTML5</strong> canvas<strong> </strong>and raw <strong>JavaScript</strong>. After about a few hours I decided to switch to <strong>Phaser</strong>, which is a 2D game engine that works for HTML5. Coping over what I had done didn’t take too long and allowed me to learn how Phaser works quickly.</p>
+								<p>To make the graphics I once again use Photoshop. Over the period of making this game I managed to use the tools within Photoshop to create clouds, and foreground characters and items.</p>
+							</div>
+							<div class="six columns">
+								<image class="twelve columns" src="images/post-skyliner.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://normalkarl.itch.io/skyliner" target="_blank"><button>Play Now</button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="oo-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">OBJECT ORIENTED PROGRAMMING</h4>
+						</div>
+						<div class="row">
+							<div class="nine columns">
+								<p>For my Object Oriented Programming assignment I decided to focus on my programming techniques, so alot of the code is actuallly more engine code than game code. I used <strong>SFML</strong> as a base and elaborated from there by implementing Game, Input, Scene and GameObject managers to create a more coherant engine.</p>
+								<p>The game featured is a game called <strong>Power Shot </strong>and in the game the goal is to plant turrets on the ground and then fire them. Each barrel will shoot one bullet and will only last for a short peroid of time. The goal is to strategically place the turrets so you can remove as many of the numbered blocks as possible. The number on the blocks signify how many times the blocks can withstand a hit. Once all the blocks on the screen are gone the area is conquered and you can move onto the next level.</p>
+								<p>I believe this game would fair better on mobile platforms due to portrait screen and also the mouse being the only input. Maybe at a later date this can be adapted to iOS and Android.</p>
+							</div>
+							<div class="three columns">
+								<image class="twelve columns" src="images/post-oo.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://github.com/NormalKarl/OO-Programming" target="_blank"><button>GITHUB REPO</button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="group-1" class="row">
+					<image id="3dsr-button" class="project-button three columns" src="images/3D Software Rasterizer.png" />
+					<image id="3dpe-button" class="project-button three columns" src="images/3D Physics Engine.png" />
+					<image id="ai-button" class="project-button three columns" src="images/Neural Networks and Genetic Algorithms.png" />
+					<image id="freefromwight-button" class="project-button three columns" src="images/FreeFromWight.png" />
+				</div>
+				<div id="3dsr-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">3D SOFTWARE RASTERIZER</h4>
+						</div>
+						<div class="row">
+							<div class="seven columns">
+								<p>For my second semester I was given a unit that required us to implement mathematics specific to 3d graphics. In my assignment I had created a <strong>Ray Tracer</strong>, <strong>Rasterizer</strong>,<strong> Curves</strong>, <strong>Fractals</strong> and <strong>Primitives</strong>. This is by far my most proud project that I completed as part of my university.</p>
+								<p>Implementing a Rasterizer was quite a journey and I learnt a lot about 3D graphics along the way. I had previously had a look at OpenGL so performing the same transformations required to get points on the screen was not to hard. The hard part came when I needed to implement a trangle rasterizer. I used an algorithm which split the triangle into 2 (flat-bottom and flat-top triangles), and that seemed to do the trick. From there I could use texturing, lighting and colours to create full 3d rendered objects on the scene.</p>
+							</div>
+							<div class="five columns">
+								<image class="twelve columns" src="images/post-3dsr.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://github.com/NormalKarl/Mathmatics-for-Computer-Graphics" target="_blank"><button>GITHUB REPO</button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="3dpe-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">3D PHYSICS ENGINE</h4>
+						</div>
+						<div class="row">
+							<div class="seven columns">
+								<p>This is my first attempt at a full 3D physics engine created for Bournemouth University as part of the course. The result of which is not to bad all things considered. I do not actually have anything above a C in mathematics and I believe I have achieved quite a good level of quality. The challenge here is the angular impulse of the object. I have managed to implement angular momentum to spin the object on an axis but an impulse does not quite respond correctly. That is why it can be quite effective in only a select few situations. For example Minecraft would be a good, since all the blocks are aligned to the world and are not rotated besides the actual Mob characters. My 2D physics engines are much better and more dynamic and stable than this one but I have every intention to improve on the code and try to fix these areas.</p>
+							</div>
+							<div class="five columns">
+								<image class="twelve columns" src="images/post-3dpe.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ai-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">NEURAL NETWORKS AND GENETIC ALGORITHMS</h4>
+						</div>
+						<div class="row">
+							<div class="seven columns">
+								<p>At my University I was tasked with finding a neural network or genetic algorithm solution to the traditional A* path-finding method. Whilst researching this area I have come across an older <a href="https://github.com/NormalKarl/AI-Pathfinding/blob/master/Neural%20Networks%20for%20Real-time%20Pathfinding%20in%20Computer%20Games.pdf" target="_blank" rel="noopener">paper</a> on the use of both artificial neural network and genetic algorithms in tandem. This was achieved by lining up all the weights into a chromosome and then performing a genetic algorithm evolution on that chromosome.</p>
+								<p>Implementing this was quite a task. I decided to use no preexisting libraries and relied solely on the CPU to perform the training and fitness tests. The end result was a working yet wonky result. It wouldn&rsquo;t find a very good path but it did find a path, and once trained this can be much faster then A*. This still needs some work to be used effectively in video games.</p>
+								<p>The training method for this neural network is a genetic algorithm. This is achieved by taking all the weights in order by index and putting them into a single array, after this the so familiar genetic algorithm can be applied and then a fitness test to calculate a fitness of the offspring. This works very well however you will need to calculate a new set of weights for each map for it to actually work and find a path at all.</p>
+								<p>As you can see the layout of the neural network is quite simple and has only 1 hidden layer. A back propagation training method might be more effective, however I did not have enough time to implement this. I hope to move forward with trying neural networks on models and more advanced A.I. for characters / CPU&rsquo;s.</p>
+							</div>
+							<div class="five columns">
+								<image class="twelve columns" src="images/post-ai.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://github.com/NormalKarl/AI-Pathfinding" target="_blank"><button>GITHUB REPO</button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="freefromwight-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">FREEFROMWIGHT</h4>
+						</div>
+						<div class="row">
+							<div class="eight columns">
+								<p>FreeFromWight is a dining service created by The Wight Guys Ltd. I&rsquo;ve been givin the opportunity to work with them to develop the front end interface for the dining app. In this project I am tasked with making the app work functionally for a variety of restraunts, venus, protential offers and tailored results relating to a persons dietary needs.</p>
+								<p>The focus of this app is to create an easy experience for people who want to find vegan, vegatarian, nut free, dairy free, gluten free and lactose free establishments on the Isle of Wight.</p>
+								<p>The app has been created using <strong>Xamarin</strong> with <strong>Visual Studio</strong>. Xamarin is a very powerful cross platform tool for developing mobile apps, and in my case has won me over as the go to app development software. The language that is used is<strong> C#</strong> and is very robust and pratical for this type of app. As a result of being Xamarin I have been able to make use of their professional plugins to utilise all of a native apps requirements like maps, website connections, geo locator and many others.</p>
+								<p>This has been rebranded as DineWight.</p>
+							</div>
+							<div class="four columns">
+								<image class="twelve columns" src="images/post-freefromwight.png" />
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div id="dropcube-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">DROPCUBE</h4>
-					</div>
-					<div class="row">
-						<div class="six columns">
-							<p>DropCube is an arcade game created for <strong>Android</strong> and <strong>iOS</strong> and built in <strong>Unity Engine</strong>. The goal of the game is to get a high score by clearing as many blocks as possible whilst avoiding obstacles and traps.</p>
-							<p>The development period for this game was started in October and finished by December of 2017. I ran into quite a few pitfalls with this project. I originally started this project in <strong>GameMaker</strong> however <strong>GameMaker</strong> is quite unprofessional for todays hardware and created quite a problem on a graphical level. So soon after I took the initiative to move the project over to Unity. This was quite a good choice because within just a couple days I had managed to completely implement the entire game again plus additional features.</p>
-							<p>This game was developed with my friend <strong>Ellis Lynas</strong> of <a href="https://lynasmedia.co.uk/"><strong>LynasMedia</strong> </a>and his role was to create all of the beautiful graphics that you see on the game. Together we have managed to make quite a stunning game and it&rsquo;s something we are both proud of.</p>
+			<div>
+				<h2>GAMEJAMS & SMALL GAMES</h2>
+				<div id="group-2" class="row">
+					<image id="dropcube-button" class="project-button three columns" src="images/DropCube.png" />
+					<image id="ra-button" class="project-button three columns" src="images/React Attack.png" />
+					<image id="cannonfodder-button" class="project-button three columns" src="images/Cannon Fodder.png" />
+					<image id="skyliner-button" class="project-button three columns" src="images/Skyliner.png" />
+				</div>
+				<div id="dropcube-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">DROPCUBE</h4>
 						</div>
-						<div class="six columns">
-							<image class="twelve columns" src="images/post-dropcube.png" />
-							<div style="margin: 0 auto; text-align: center;">
-								<a href="https://normalkarl.itch.io/skyliner" target="_blank"><button>Download for Android</button></a>
+						<div class="row">
+							<div class="six columns">
+								<p>DropCube is an arcade game created for <strong>Android</strong> and <strong>iOS</strong> and built in <strong>Unity Engine</strong>. The goal of the game is to get a high score by clearing as many blocks as possible whilst avoiding obstacles and traps.</p>
+								<p>The development period for this game was started in October and finished by December of 2017. I ran into quite a few pitfalls with this project. I originally started this project in <strong>GameMaker</strong> however <strong>GameMaker</strong> is quite unprofessional for todays hardware and created quite a problem on a graphical level. So soon after I took the initiative to move the project over to Unity. This was quite a good choice because within just a couple days I had managed to completely implement the entire game again plus additional features.</p>
+								<p>This game was developed with my friend <strong>Ellis Lynas</strong> of <a href="https://lynasmedia.co.uk/"><strong>LynasMedia</strong> </a>and his role was to create all of the beautiful graphics that you see on the game. Together we have managed to make quite a stunning game and it&rsquo;s something we are both proud of.</p>
+							</div>
+							<div class="six columns">
+								<image class="twelve columns" src="images/post-dropcube.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://normalkarl.itch.io/skyliner" target="_blank"><button>Download for Android</button></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="freefromwight-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">FREEFROMWIGHT</h4>
-					</div>
-					<div class="row">
-						<div class="eight columns">
-							<p>FreeFromWight is a dining service created by The Wight Guys Ltd. I&rsquo;ve been givin the opportunity to work with them to develop the front end interface for the dining app. In this project I am tasked with making the app work functionally for a variety of restraunts, venus, protential offers and tailored results relating to a persons dietary needs.</p>
-							<p>The focus of this app is to create an easy experience for people who want to find vegan, vegatarian, nut free, dairy free, gluten free and lactose free establishments on the Isle of Wight.</p>
-							<p>The app has been created using <strong>Xamarin</strong> with <strong>Visual Studio</strong>. Xamarin is a very powerful cross platform tool for developing mobile apps, and in my case has won me over as the go to app development software. The language that is used is<strong> C#</strong> and is very robust and pratical for this type of app. As a result of being Xamarin I have been able to make use of their professional plugins to utilise all of a native apps requirements like maps, website connections, geo locator and many others.</p>
-							<p>This has been rebranded as DineWight.</p>
+				<div id="ra-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">GAME DEVELOPMENT IDE</h4>
 						</div>
-						<div class="four columns">
-							<image class="twelve columns" src="images/post-freefromwight.png" />
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="runawayhero-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">RUNAWAY HERO</h4>
-					</div>
-					<div class="row">
-						<div class="seven columns">
-							<p>Runaway Hero is a 2D platformer created in <strong>Contstruct 2</strong> and was created for my Digital Technologies unit. In the game you are a small 2d hero and your goal is to runaway in this case away from danger and towards then end of the level. You have 3 small lives at the top of the screen. Once these are gone the level resets.</p>
-							<p>When making this game I had used a <strong>Photoshop </strong>and <strong>Construct2</strong>. I had quite a lot of fun developing this game because it was made very quickly compared to my other C# and C++ projects. I managed to implement a selection of obstacles and traps.</p>
-							<p>This was originally going to be a larger as a Java game but I had re-adapted this to work for my assignment.</p>
-						</div>
-						<div class="five columns">
-							<image class="twelve columns" src="images/post-runawayhero.png" />
-							<div style="margin: 0 auto; text-align: center;">
-								<a href="https://normalkarl.itch.io/runaway-hero" target="_blank"><button>Play Now</button></a>
+						<div class="row">
+							<div class="six columns">
+								<p>Skyliner is a 2D endless runner created in 2016 over a small two week period. This was my first use of the <a href="https://phaser.io/">Phaser</a> and was quite a nice challenge. Its not much to look at from a programming perspective but I believe it has a nice asthetic and I have now decided to expand on this game for a mobile release in 2019.</p>
+								<p>This game took 2 weeks to develop and the initial idea started to emerge in the first few days. The game started of with nothing more than using <strong>HTML5</strong> canvas<strong> </strong>and raw <strong>JavaScript</strong>. After about a few hours I decided to switch to <strong>Phaser</strong>, which is a 2D game engine that works for HTML5. Coping over what I had done didn’t take too long and allowed me to learn how Phaser works quickly.</p>
+								<p>To make the graphics I once again use Photoshop. Over the period of making this game I managed to use the tools within Photoshop to create clouds, and foreground characters and items.</p>
+							</div>
+							<div class="six columns">
+								<image class="twelve columns" src="images/post-skyliner.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://normalkarl.itch.io/skyliner" target="_blank"><button>Play Now</button></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="group-2" class="row">
-				<image id="hail-button" class="project-button three columns" src="images/HAIL.png" />
-				<image id="cannonfodder-button" class="project-button three columns" src="images/Cannon Fodder.png" />
-				<image id="bedtime-button" class="project-button three columns" src="images/Bedtime.png" />
-				<image id="whodoneit-button" class="project-button three columns" src="images/Who Done It.png" />
-			</div>
-			<div id="hail-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">HAIL - HUMANS ARE ILL LIVED</h4>
-					</div>
-					<div class="row">
-						<div class="seven columns">
-							<p>HAIL or Humans Are Ill Lived is my second Game Jam game for <strong>Ludum Dare 33</strong>. I made this game with my friend Harvey and we decided for the theme &ldquo;You are the Monster&rdquo; we went with a more &ldquo;artistique&rdquo; approach. In the game there are 4 different monsters which you fight. You only have one attack move but you also have the ability to move left and right and jump. The goal here is to dodge and then attack at the right time.</p>
-							<p>When making the game we encountered quite a variety of challenges. First of all, neither of us had used source control before so we didn&rsquo;t bother using that. Instead we decided to go with a plugin to <strong>Eclipse</strong> called <strong>Saros</strong> and it allow for real time development together. So this made it quite easy for the both of us to develop the small game using only a handful of files without having constant merging issues. As we were both programmers we often overwritten each others code so Saros happen to be our light and saviour in this case.</p>
-							<p>Another challenge we encountered was the artifical intelegence part of the monsters. We wanted a good challenge and a little less predictiable then most boss rush games. We both believe that we have made something very interesting and creates for enough game play for a 2 day game development cycle.</p>
-							<p>I created the small engine we used and also all the graphics you see on the screen. I&rsquo;m not much of an artist but with a restricted colour pallete I manage to get quite a lot out of a little. I hope to do this again in the future because there is some interesting ideas in this game aswell as the asthetic that accompanies it.</p>
+				<div id="cannonfodder-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">CANNON FODDER</h4>
 						</div>
-						<div class="five columns">
-							<image class="twelve columns" src="images/post-hail.png" />
-							<div style="margin: 0 auto; text-align: center;">
-								<a href="https://drive.google.com/open?id=1t0U4HuGySfi6bQhKBgBl7h4MAwhvgKs2" target="_blank"><button>Download and Play Now</button></a>
+						<div class="row">
+							<div class="seven columns">
+								<p>Cannon Fodder is a game created with Bournemouth University&rsquo;s game jam event. Created in 48 hours me and my friends have created a small fighting platformer in Unity. Unlike many other projects, the programming happened to be more of a secondary job for me this time as my main focus was creating the artwork. I did this primarily using <strong>Photoshop</strong>. However I also made the levels which we used to present the game design as a later date.</p>
+								<p>Cannon Fodder posed a different set of challenges than most of my other projects, mostly trying to make the game look good enough to present in just a few days. I had focused on the shadows, background, characters and the effects within the game. All of this paid off as we managed to win a &pound;100 amazon gift-card between us.</p>
+							</div>
+							<div class="five columns">
+								<image class="twelve columns" src="images/post-cannonfodder.png" />
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="cannonfodder-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">CANNON FODDER</h4>
-					</div>
-					<div class="row">
-						<div class="seven columns">
-							<p>Cannon Fodder is a game created with Bournemouth University&rsquo;s game jam event. Created in 48 hours me and my friends have created a small fighting platformer in Unity. Unlike many other projects, the programming happened to be more of a secondary job for me this time as my main focus was creating the artwork. I did this primarily using <strong>Photoshop</strong>. However I also made the levels which we used to present the game design as a later date.</p>
-							<p>Cannon Fodder posed a different set of challenges than most of my other projects, mostly trying to make the game look good enough to present in just a few days. I had focused on the shadows, background, characters and the effects within the game. All of this paid off as we managed to win a &pound;100 amazon gift-card between us.</p>
+				<div id="skyliner-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">SKYLINER</h4>
 						</div>
-						<div class="five columns">
-							<image class="twelve columns" src="images/post-cannonfodder.png" />
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="bedtime-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">BEDTIME</h4>
-					</div>
-					<div class="row">
-						<div class="seven columns">
-							<p>Bedtime was created for the Bournemouth University 2018 autumn game jam. It was created with team mates Harvey Jones, Jacob Martin and Alasdair Hitchen. We are very proud of the game we have created together and we worked very hard over the 48 hours. It seemed to have paid of because as a team we won 1st place. An amazing accomplishment to be chosen from all of the entries seen that day.</p>
-							<p>My role whilst developing this game has been to program small areas such as the mechanics and user interaction. However my main role was to create and design all the levels and mechanical functionality. I have never needed to do any level design before so this was a welcome change to the format. I needed to start learning the fundamentals of level design for other personal and university projects, so there is no better time to learn. As you can see I believe that I have achieved quite a spectacular job for a first time level designer.</p>
-						</div>
-						<div class="five columns">
-							<image class="twelve columns" src="images/post-bedtime.png" />
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="whodoneit-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">WHO DONE IT</h4>
-					</div>
-					<div class="row">
-						<div class="seven columns">
-							<p>Bedtime was created for the Bournemouth University 2018 autumn game jam. It was created with team mates Harvey Jones, Jacob Martin and Alasdair Hitchen. We are very proud of the game we have created together and we worked very hard over the 48 hours. It seemed to have paid of because as a team we won 1st place. An amazing accomplishment to be chosen from all of the entries seen that day.</p>
-							<p>My role whilst developing this game has been to program small areas such as the mechanics and user interaction. However my main role was to create and design all the levels and mechanical functionality. I have never needed to do any level design before so this was a welcome change to the format. I needed to start learning the fundamentals of level design for other personal and university projects, so there is no better time to learn. As you can see I believe that I have achieved quite a spectacular job for a first time level designer.</p>
-						</div>
-						<div class="five columns">
-							<image class="twelve columns" src="images/post-whodoneit.png" />
-							<div style="margin: 0 auto; text-align: center;">
-								<a href="https://normalkarl.itch.io/ld31" target="_blank"><button>Download and Play Now</button></a>
+						<div class="row">
+							<div class="six columns">
+								<p>Skyliner is a 2D endless runner created in 2016 over a small two week period. This was my first use of the <a href="https://phaser.io/">Phaser</a> and was quite a nice challenge. Its not much to look at from a programming perspective but I believe it has a nice asthetic and I have now decided to expand on this game for a mobile release in 2019.</p>
+								<p>This game took 2 weeks to develop and the initial idea started to emerge in the first few days. The game started of with nothing more than using <strong>HTML5</strong> canvas<strong> </strong>and raw <strong>JavaScript</strong>. After about a few hours I decided to switch to <strong>Phaser</strong>, which is a 2D game engine that works for HTML5. Coping over what I had done didn’t take too long and allowed me to learn how Phaser works quickly.</p>
+								<p>To make the graphics I once again use Photoshop. Over the period of making this game I managed to use the tools within Photoshop to create clouds, and foreground characters and items.</p>
+							</div>
+							<div class="six columns">
+								<image class="twelve columns" src="images/post-skyliner.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://normalkarl.itch.io/skyliner" target="_blank"><button>Play Now</button></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="group-3" class="row">
-				<image id="3dsr-button" class="project-button three columns" src="images/3D Software Rasterizer.png" />
-				<image id="3dpe-button" class="project-button three columns" src="images/3D Physics Engine.png" />
-				<image id="ai-button" class="project-button three columns" src="images/Neural Networks and Genetic Algorithms.png" />
-				<image id="oo-button" class="project-button three columns" src="images/OO Coding.png" />
-			</div>
-			<div id="3dsr-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">3D SOFTWARE RASTERIZER</h4>
-					</div>
-					<div class="row">
-						<div class="seven columns">
-							<p>For my second semester I was given a unit that required us to implement mathematics specific to 3d graphics. In my assignment I had created a <strong>Ray Tracer</strong>, <strong>Rasterizer</strong>,<strong> Curves</strong>, <strong>Fractals</strong> and <strong>Primitives</strong>. This is by far my most proud project that I completed as part of my university.</p>
-							<p>Implementing a Rasterizer was quite a journey and I learnt a lot about 3D graphics along the way. I had previously had a look at OpenGL so performing the same transformations required to get points on the screen was not to hard. The hard part came when I needed to implement a trangle rasterizer. I used an algorithm which split the triangle into 2 (flat-bottom and flat-top triangles), and that seemed to do the trick. From there I could use texturing, lighting and colours to create full 3d rendered objects on the scene.</p>
+				<div id="group-3" class="row">
+					<image id="hail-button" class="project-button three columns" src="images/HAIL.png" />
+					<image id="bedtime-button" class="project-button three columns" src="images/Bedtime.png" />
+					<image id="whodoneit-button" class="project-button three columns" src="images/Who Done It.png" />
+					<image id="runawayhero-button" class="project-button three columns" src="images/Runaway Hero.png" />
+				</div>			
+				<div id="hail-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">HAIL - HUMANS ARE ILL LIVED</h4>
 						</div>
-						<div class="five columns">
-							<image class="twelve columns" src="images/post-3dsr.png" />
-							<div style="margin: 0 auto; text-align: center;">
-								<a href="https://github.com/NormalKarl/Mathmatics-for-Computer-Graphics" target="_blank"><button>GITHUB REPO</button></a>
+						<div class="row">
+							<div class="seven columns">
+								<p>HAIL or Humans Are Ill Lived is my second Game Jam game for <strong>Ludum Dare 33</strong>. I made this game with my friend Harvey and we decided for the theme &ldquo;You are the Monster&rdquo; we went with a more &ldquo;artistique&rdquo; approach. In the game there are 4 different monsters which you fight. You only have one attack move but you also have the ability to move left and right and jump. The goal here is to dodge and then attack at the right time.</p>
+								<p>When making the game we encountered quite a variety of challenges. First of all, neither of us had used source control before so we didn&rsquo;t bother using that. Instead we decided to go with a plugin to <strong>Eclipse</strong> called <strong>Saros</strong> and it allow for real time development together. So this made it quite easy for the both of us to develop the small game using only a handful of files without having constant merging issues. As we were both programmers we often overwritten each others code so Saros happen to be our light and saviour in this case.</p>
+								<p>Another challenge we encountered was the artifical intelegence part of the monsters. We wanted a good challenge and a little less predictiable then most boss rush games. We both believe that we have made something very interesting and creates for enough game play for a 2 day game development cycle.</p>
+								<p>I created the small engine we used and also all the graphics you see on the screen. I&rsquo;m not much of an artist but with a restricted colour pallete I manage to get quite a lot out of a little. I hope to do this again in the future because there is some interesting ideas in this game aswell as the asthetic that accompanies it.</p>
+							</div>
+							<div class="five columns">
+								<image class="twelve columns" src="images/post-hail.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://drive.google.com/open?id=1t0U4HuGySfi6bQhKBgBl7h4MAwhvgKs2" target="_blank"><button>Download and Play Now</button></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="3dpe-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">3D PHYSICS ENGINE</h4>
-					</div>
-					<div class="row">
-						<div class="seven columns">
-							<p>This is my first attempt at a full 3D physics engine created for Bournemouth University as part of the course. The result of which is not to bad all things considered. I do not actually have anything above a C in mathematics and I believe I have achieved quite a good level of quality. The challenge here is the angular impulse of the object. I have managed to implement angular momentum to spin the object on an axis but an impulse does not quite respond correctly. That is why it can be quite effective in only a select few situations. For example Minecraft would be a good, since all the blocks are aligned to the world and are not rotated besides the actual Mob characters. My 2D physics engines are much better and more dynamic and stable than this one but I have every intention to improve on the code and try to fix these areas.</p>
+				<div id="bedtime-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">BEDTIME</h4>
 						</div>
-						<div class="five columns">
-							<image class="twelve columns" src="images/post-3dpe.png" />
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="ai-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">NEURAL NETWORKS AND GENETIC ALGORITHMS</h4>
-					</div>
-					<div class="row">
-						<div class="seven columns">
-							<p>At my University I was tasked with finding a neural network or genetic algorithm solution to the traditional A* path-finding method. Whilst researching this area I have come across an older <a href="https://github.com/NormalKarl/AI-Pathfinding/blob/master/Neural%20Networks%20for%20Real-time%20Pathfinding%20in%20Computer%20Games.pdf" target="_blank" rel="noopener">paper</a> on the use of both artificial neural network and genetic algorithms in tandem. This was achieved by lining up all the weights into a chromosome and then performing a genetic algorithm evolution on that chromosome.</p>
-							<p>Implementing this was quite a task. I decided to use no preexisting libraries and relied solely on the CPU to perform the training and fitness tests. The end result was a working yet wonky result. It wouldn&rsquo;t find a very good path but it did find a path, and once trained this can be much faster then A*. This still needs some work to be used effectively in video games.</p>
-							<p>The training method for this neural network is a genetic algorithm. This is achieved by taking all the weights in order by index and putting them into a single array, after this the so familiar genetic algorithm can be applied and then a fitness test to calculate a fitness of the offspring. This works very well however you will need to calculate a new set of weights for each map for it to actually work and find a path at all.</p>
-							<p>As you can see the layout of the neural network is quite simple and has only 1 hidden layer. A back propagation training method might be more effective, however I did not have enough time to implement this. I hope to move forward with trying neural networks on models and more advanced A.I. for characters / CPU&rsquo;s.</p>
-						</div>
-						<div class="five columns">
-							<image class="twelve columns" src="images/post-ai.png" />
-							<div style="margin: 0 auto; text-align: center;">
-								<a href="https://github.com/NormalKarl/AI-Pathfinding" target="_blank"><button>GITHUB REPO</button></a>
+						<div class="row">
+							<div class="seven columns">
+								<p>Bedtime was created for the Bournemouth University 2018 autumn game jam. It was created with team mates Harvey Jones, Jacob Martin and Alasdair Hitchen. We are very proud of the game we have created together and we worked very hard over the 48 hours. It seemed to have paid of because as a team we won 1st place. An amazing accomplishment to be chosen from all of the entries seen that day.</p>
+								<p>My role whilst developing this game has been to program small areas such as the mechanics and user interaction. However my main role was to create and design all the levels and mechanical functionality. I have never needed to do any level design before so this was a welcome change to the format. I needed to start learning the fundamentals of level design for other personal and university projects, so there is no better time to learn. As you can see I believe that I have achieved quite a spectacular job for a first time level designer.</p>
+							</div>
+							<div class="five columns">
+								<image class="twelve columns" src="images/post-bedtime.png" />
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="oo-project" class="project-item row">
-				<div class="project-box twelve columns">
-					<div class="row">
-						<h4 class="twelve columns title">OBJECT ORIENTED PROGRAMMING</h4>
-					</div>
-					<div class="row">
-						<div class="nine columns">
-							<p>For my Object Oriented Programming assignment I decided to focus on my programming techniques, so alot of the code is actuallly more engine code than game code. I used <strong>SFML</strong> as a base and elaborated from there by implementing Game, Input, Scene and GameObject managers to create a more coherant engine.</p>
-							<p>The game featured is a game called <strong>Power Shot </strong>and in the game the goal is to plant turrets on the ground and then fire them. Each barrel will shoot one bullet and will only last for a short peroid of time. The goal is to strategically place the turrets so you can remove as many of the numbered blocks as possible. The number on the blocks signify how many times the blocks can withstand a hit. Once all the blocks on the screen are gone the area is conquered and you can move onto the next level.</p>
-							<p>I believe this game would fair better on mobile platforms due to portrait screen and also the mouse being the only input. Maybe at a later date this can be adapted to iOS and Android.</p>
+				<div id="whodoneit-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">WHO DONE IT</h4>
 						</div>
-						<div class="three columns">
-							<image class="twelve columns" src="images/post-oo.png" />
-							<div style="margin: 0 auto; text-align: center;">
-								<a href="https://github.com/NormalKarl/OO-Programming" target="_blank"><button>GITHUB REPO</button></a>
+						<div class="row">
+							<div class="seven columns">
+								<p>Bedtime was created for the Bournemouth University 2018 autumn game jam. It was created with team mates Harvey Jones, Jacob Martin and Alasdair Hitchen. We are very proud of the game we have created together and we worked very hard over the 48 hours. It seemed to have paid of because as a team we won 1st place. An amazing accomplishment to be chosen from all of the entries seen that day.</p>
+								<p>My role whilst developing this game has been to program small areas such as the mechanics and user interaction. However my main role was to create and design all the levels and mechanical functionality. I have never needed to do any level design before so this was a welcome change to the format. I needed to start learning the fundamentals of level design for other personal and university projects, so there is no better time to learn. As you can see I believe that I have achieved quite a spectacular job for a first time level designer.</p>
+							</div>
+							<div class="five columns">
+								<image class="twelve columns" src="images/post-whodoneit.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://normalkarl.itch.io/ld31" target="_blank"><button>Download and Play Now</button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="runawayhero-project" class="project-item row">
+					<div class="project-box twelve columns">
+						<div class="row">
+							<h4 class="twelve columns title">RUNAWAY HERO</h4>
+						</div>
+						<div class="row">
+							<div class="seven columns">
+								<p>Runaway Hero is a 2D platformer created in <strong>Contstruct 2</strong> and was created for my Digital Technologies unit. In the game you are a small 2d hero and your goal is to runaway in this case away from danger and towards then end of the level. You have 3 small lives at the top of the screen. Once these are gone the level resets.</p>
+								<p>When making this game I had used a <strong>Photoshop </strong>and <strong>Construct2</strong>. I had quite a lot of fun developing this game because it was made very quickly compared to my other C# and C++ projects. I managed to implement a selection of obstacles and traps.</p>
+								<p>This was originally going to be a larger as a Java game but I had re-adapted this to work for my assignment.</p>
+							</div>
+							<div class="five columns">
+								<image class="twelve columns" src="images/post-runawayhero.png" />
+								<div style="margin: 0 auto; text-align: center;">
+									<a href="https://normalkarl.itch.io/runaway-hero" target="_blank"><button>Play Now</button></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
+		
 		<div class="banner">
 			<div class="container">
 				<h6>Copyright &copy; Karl Ward - 2020 | karlward97@gmail.com</h6>
